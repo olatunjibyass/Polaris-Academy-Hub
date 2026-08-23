@@ -169,7 +169,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        return parsed.map((p: Program) => {
+        const mapped = parsed.map((p: Program) => {
           if (p.id === 'stem-ai-coding' && (!p.bannerImage || p.bannerImage.includes('unsplash.com/photo-1581092918056'))) {
             return { ...p, bannerImage: 'https://i.imgur.com/XJmmc5B.jpeg' };
           }
@@ -187,6 +187,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
           }
           return p;
         });
+
+        // Ensure newly added initial programs (like young adult program) exist
+        for (const initProg of initialPrograms) {
+          if (!mapped.some((p: Program) => p.id === initProg.id)) {
+            mapped.push(initProg);
+          }
+        }
+        return mapped;
       } catch {
         return initialPrograms;
       }
@@ -196,7 +204,20 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
 
   const [resources, setResources] = useState<Resource[]>(() => {
     const saved = localStorage.getItem('polaris_resources');
-    return saved ? JSON.parse(saved) : initialResources;
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        for (const initRes of initialResources) {
+          if (!parsed.some((r: Resource) => r.id === initRes.id)) {
+            parsed.push(initRes);
+          }
+        }
+        return parsed;
+      } catch {
+        return initialResources;
+      }
+    }
+    return initialResources;
   });
 
   const [events, setEvents] = useState<EventItem[]>(() => {

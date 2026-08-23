@@ -109,7 +109,7 @@ export const LearningHubSection: React.FC = () => {
             {/* Age Quick Filter */}
             <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 p-1 rounded-xl shrink-0 overflow-x-auto">
               <span className="text-[11px] text-slate-500 px-2 font-bold">Age:</span>
-              {(['All', '3-5', '6-8', '9-12'] as const).map(age => (
+              {(['All', '3-5', '6-8', '9-12', '18-24'] as const).map(age => (
                 <button
                   key={age}
                   onClick={() => setActiveAge(age)}

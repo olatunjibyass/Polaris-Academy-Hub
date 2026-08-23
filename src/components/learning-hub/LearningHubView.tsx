@@ -118,7 +118,7 @@ export const LearningHubView: React.FC = () => {
             {/* Age Filter */}
             <div className="flex items-center gap-1.5 bg-slate-900 border border-slate-700 p-1 rounded-xl shrink-0 overflow-x-auto">
               <span className="text-[11px] text-slate-400 px-2 font-medium">Age:</span>
-              {(['All', '3-5', '6-8', '9-12'] as const).map(age => (
+              {(['All', '3-5', '6-8', '9-12', '18-24'] as const).map(age => (
                 <button
                   key={age}
                   onClick={() => setSelectedAge(age)}

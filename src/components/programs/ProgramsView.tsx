@@ -65,13 +65,13 @@ export const ProgramsView: React.FC = () => {
           <div className="max-w-3xl space-y-4 relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#031D13] border border-[#C5A021]/40 text-[#FFD700] text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-[#C5A021]" />
-              <span>Ages 3–12 Curriculum Catalog</span>
+              <span>Ages 3–24 Curriculum & Mentorship Catalog</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight">
               Educational Programs & Hub Classes
             </h1>
             <p className="text-sm sm:text-base text-emerald-100/90 leading-relaxed">
-              Explore our 6 core pillars spanning foundational academics, coding & AI, fine arts, music, dance, and youth leadership. Small group formats ensure every child is seen, supported, and challenged.
+              Explore our core pillars spanning foundational academics, coding & AI, fine arts, music, dance, youth leadership, and young adult career accelerators. Small group formats ensure every learner is seen, supported, and empowered.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export const ProgramsView: React.FC = () => {
               <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search programs, coding, ballet, math, public speaking..."
+                placeholder="Search programs, coding, ballet, math, career, public speaking..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-slate-50 border border-slate-300 rounded-xl pl-10 pr-4 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-amber-500"
@@ -95,9 +95,9 @@ export const ProgramsView: React.FC = () => {
             </div>
 
             {/* Age Filter */}
-            <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl shrink-0">
+            <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl shrink-0 overflow-x-auto">
               <span className="text-[11px] font-bold text-slate-600 px-2">Filter Age:</span>
-              {(['All Ages', '3-5', '6-8', '9-12'] as const).map(age => (
+              {(['All Ages', '3-5', '6-8', '9-12', '18-24'] as const).map(age => (
                 <button
                   key={age}
                   onClick={() => setSelectedAgeFilter(age)}

@@ -44,6 +44,15 @@ export const AgeFilterSection: React.FC = () => {
       icon: Compass,
       photo: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&q=80&w=400',
       description: 'Micro-robotics, AI literacy, Junior Orators public speaking, executive study habits, full acrylic painting, and community impact projects.'
+    },
+    {
+      group: '18-24' as AgeGroup,
+      title: 'Ages 18–24',
+      subtitle: 'Career, Tech & Leadership Accelerator',
+      badge: 'Young Adults',
+      icon: Compass,
+      photo: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400',
+      description: 'Career portfolio refinement, applied workplace AI, interview mastery, financial independence, and executive mentorship.'
     }
   ];
 
@@ -64,16 +73,16 @@ export const AgeFilterSection: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0A1E4A] tracking-tight font-heading">
-            Personalized for <span className="text-[#C5A021]">Every Stage of Childhood</span>
+            Personalized for <span className="text-[#C5A021]">Every Stage of Growth</span>
           </h2>
 
           <p className="text-base text-slate-600 leading-relaxed font-normal">
-            Select your child’s age range below to view customized learning tracks, recommended developmental goals, and scheduled classes.
+            Select an age cohort below to view customized learning tracks, recommended developmental goals, and scheduled classes.
           </p>
         </div>
 
-        {/* 3 Interactive Age Selector Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        {/* 4 Interactive Age Selector Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {ageTiers.map((tier) => {
             const Icon = tier.icon;
             const isSelected = selectedAge === tier.group;

@@ -1,4 +1,4 @@
-export type AgeGroup = '3-5' | '6-8' | '9-12' | 'All Ages';
+export type AgeGroup = '3-5' | '6-8' | '9-12' | '18-24' | 'All Ages';
 
 export type ProgramCategory = 
   | 'Academic Support'

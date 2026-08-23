@@ -50,7 +50,10 @@ export const ParentDashboard: React.FC = () => {
 
     let group: AgeGroup = '6-8';
     if (newAge <= 5) group = '3-5';
-    else if (newAge >= 9) group = '9-12';
+    else if (newAge <= 8) group = '6-8';
+    else if (newAge <= 12) group = '9-12';
+    else if (newAge >= 18) group = '18-24';
+    else group = '9-12';
 
     addChildProfile({
       firstName: newFirstName,

@@ -208,6 +208,36 @@ export const initialPrograms: Program[] = [
     bannerImage: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=900',
     cost: 'Free Nonprofit Access',
     featured: true
+  },
+  {
+    id: 'young-adult-career-leadership',
+    title: 'Career Launchpad & Young Adult Tech Leadership',
+    category: 'Life Skills & Leadership',
+    ageRange: 'Ages 18–24',
+    ageGroup: ['18-24'],
+    level: 'All Levels',
+    shortDescription: 'Professional career development, resume & interview mastery, applied workplace AI, personal finance, and executive mentorship.',
+    fullDescription: 'Designed specifically for emerging young adults (ages 18–24) navigating college, early careers, or tech transitions. This intensive evening and weekend cohort pairs participants with seasoned industry mentors for hands-on career coaching, technical interview simulations, applied workplace AI tools, personal financial independence, and community civic initiatives.',
+    curriculumHighlights: [
+      'Professional resume refinement, LinkedIn branding & technical interview simulations',
+      'Applied Artificial Intelligence & productivity toolkits for modern workplaces',
+      'Personal financial literacy: budgeting, credit health, taxes & investment basics',
+      'Executive presence, public negotiation, emotional intelligence & mentor networking'
+    ],
+    skillsLearned: ['Career Navigation', 'Workplace AI Literacy', 'Financial Management', 'Executive Communication'],
+    schedule: 'Tuesday & Thursday 7:00 – 8:30 PM | Saturday 11:30 AM – 1:00 PM',
+    scheduleSlots: [
+      { id: 'slot-ya-1', day: 'Tuesday', time: '7:00 PM – 8:30 PM', roomOrPlatform: 'Executive Hub & Innovation Lab', ageGroup: '18-24', spotsLeft: 10 },
+      { id: 'slot-ya-2', day: 'Thursday', time: '7:00 PM – 8:30 PM', roomOrPlatform: 'Executive Hub & Innovation Lab', ageGroup: '18-24', spotsLeft: 8 },
+      { id: 'slot-ya-3', day: 'Saturday', time: '11:30 AM – 1:00 PM', roomOrPlatform: 'Innovation Studio & Virtual Lab', ageGroup: '18-24', spotsLeft: 12 }
+    ],
+    instructorName: 'Darius Sterling, MBA',
+    instructorRole: 'Director of Young Adult & Career Mentorship',
+    instructorPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300',
+    iconName: 'Compass',
+    bannerImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=900',
+    cost: 'Free Nonprofit Access',
+    featured: true
   }
 ];
 
@@ -497,6 +527,46 @@ export const initialResources: Resource[] = [
     },
     downloadCount: 520,
     completedCount: 390
+  },
+  {
+    id: 'res-career-young-adult-toolkit',
+    title: 'Young Adult Career, Tech & AI Navigator',
+    category: 'Leadership',
+    ageGroup: '18-24',
+    difficulty: 'Intermediate',
+    format: 'Leadership Quest',
+    description: 'A structured checklist and interactive quest covering resume optimization, technical interview strategies, applied workplace AI tools, and networking mastery.',
+    estimatedMinutes: 15,
+    featured: true,
+    thumbnail: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400',
+    tags: ['Career', 'Leadership', 'Workplace AI', 'Resume', 'Networking', 'Ages 18-24'],
+    interactiveType: 'quiz',
+    quizQuestions: [
+      {
+        question: 'When optimizing your professional resume for tech and leadership roles, what should each bullet point highlight first?',
+        options: [
+          'A generic list of daily tasks',
+          'Measurable impact and quantifiable results (e.g. % improved, $ saved, projects launched)',
+          'A long paragraph explaining personal hobbies',
+          'Only the job title without details'
+        ],
+        correctIndex: 1,
+        explanation: 'Leading with action verbs and quantifiable impact demonstrates your direct value and problem-solving abilities to recruiters.'
+      },
+      {
+        question: 'What is a best practice for using generative AI in your daily professional workflow?',
+        options: [
+          'Copying unverified code or text straight into production without review',
+          'Using AI as a fast first-draft accelerator and brainstorming copilot while rigorously verifying accuracy',
+          'Avoiding AI completely in modern tech workplaces',
+          'Sharing proprietary company confidential credentials with public bots'
+        ],
+        correctIndex: 1,
+        explanation: 'Modern professionals use AI as an intelligent multiplier while maintaining strict ethical review, accuracy checks, and privacy standards.'
+      }
+    ],
+    downloadCount: 140,
+    completedCount: 95
   }
 ];
 

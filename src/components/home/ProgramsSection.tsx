@@ -45,7 +45,7 @@ export const ProgramsSection: React.FC = () => {
               Nurturing Intellect, <span className="text-[#C5A021]">Passion & Creativity</span>
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed font-normal">
-              Designed specifically for ages 3–12. All programs emphasize hands-on learning, positive encouragement, and personalized mentorship in an inclusive nonprofit environment.
+              Designed for ages 3–24. All programs emphasize hands-on learning, positive encouragement, and personalized mentorship in an inclusive nonprofit environment.
             </p>
           </div>
 
