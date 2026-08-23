@@ -1,0 +1,6 @@
+{
+  "name": "Polaris Academy Hub",
+  "description": "A modern nonprofit educational platform for children ages 3–12 to learn, create, perform, and lead.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
