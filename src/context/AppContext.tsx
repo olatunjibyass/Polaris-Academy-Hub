@@ -147,6 +147,9 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         if (!parsed.phone || parsed.phone.includes('765-2747') || parsed.phone.includes('[OFFICIAL PHONE]')) {
           parsed.phone = '(614) 296-3599';
         }
+        if (!parsed.email || parsed.email.includes('hello@polarisacademyhub.org')) {
+          parsed.email = 'Polarisacademyhub@gmail.com';
+        }
         if (!parsed.secondaryPhone) {
           parsed.secondaryPhone = '(614) 401-6775';
         }

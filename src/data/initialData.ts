@@ -18,7 +18,7 @@ export const initialSiteSettings: SiteSettings = {
   vision: "A world where every young mind is given the guiding star, nurturing guidance, and creative freedom to unlock their full potential regardless of background.",
   phone: '(614) 296-3599',
   secondaryPhone: '(614) 401-6775',
-  email: 'hello@polarisacademyhub.org',
+  email: 'Polarisacademyhub@gmail.com',
   address: '80 S Liberty Street, Powell, OH 43065',
   tuesdayHours: 'Tuesday: 4:00 PM – 7:00 PM',
   thursdayHours: 'Thursday: 4:00 PM – 7:00 PM',
